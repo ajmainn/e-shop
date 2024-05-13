@@ -1,0 +1,207 @@
+/* Reset some default styles for consistency */
+body,
+h1,
+p,
+form,
+label,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply some basic styling to the body */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(244, 240, 244);
+}
+
+/* Style the login form */
+form {
+  width: 400px;
+  margin: 50px auto;
+  background-color: rgb(250, 248, 250); /* Changed background color */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted box shadow */
+  border: 2px solid blueviolet; /* Adjusted border */
+}
+
+/* Style form headings */
+h1 {
+  text-align: center;
+  color: black;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Style form labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: black;
+}
+
+/* Style form inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid wheat;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Style form buttons */
+input[type="submit"] {
+  background-color: rgb(247, 246, 247);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: blueviolet;
+}
+.logo{
+  font-size: 20px;
+  font-weight: 800;
+}
+/* Style form links */
+a {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* Style error messages */
+.error {
+  color: red;
+}
+.btn{
+  background-color: blueviolet!important;
+}
+
+/* add employee css  */
+/* Style form inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid wheat;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Style radio buttons */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/***************
+* task page css *
+****************/
+.task-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.task-item {
+  border: 1px solid #3333;
+  padding: 30px;
+  border-radius: 20px;
+}
+/* header css  */
+.header{
+  background-color: #3333;
+}
+
+.header-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  color: #000;
+  width: 1300px;
+  margin: 0 auto;
+}
+.header-content a{
+  color: #000;
+}
+.header ul{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+/* Attendee page css  */
+.employee{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.employee label{
+  margin-bottom: 0;
+}
+
+/*************
+ Footer CSS  
+ **********/
+ 
+/* Style the footer */
+footer {
+  text-align: center;
+  padding: 30px; 
+  background-color: black; 
+  color: whitesmoke; 
+}
+
+/* Style the footer p tag */
+footer p {
+  margin-bottom: 15px; 
+}
+
+/* Style the footer ul tag */
+footer ul {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+/* Style the footer li tag */
+footer li {
+  display: inline;
+  margin-right: 15px; 
+}
+
+/* Add some margin to the bottom of the body to avoid overlapping with the footer */
+
+/* Additional styling for the footer */
+footer {
+  border-top: 3px solid whitesmoke; 
+}
+
+/* Enhance the appearance of footer links */
+footer a {
+  color: whitesmoke; 
+  text-decoration: underline; 
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: orange; 
+}
