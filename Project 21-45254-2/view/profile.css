@@ -1,0 +1,68 @@
+/* Reset some default styles for consistency */
+body, h1, p, ul, li, fieldset {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply some basic styling to the body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #a2e2ff;
+  }
+  
+  /* Style the main content container */
+  table {
+    width: 60%;
+    margin: 20px auto;
+    background-color: #62b3d8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style form headings */
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  /* Style form labels */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  /* Style the fieldset */
+  fieldset {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the unordered list */
+  ul {
+    list-style-type: none;
+  }
+  
+  /* Style the list items */
+  li {
+    margin-bottom: 5px;
+  }
+  
+  /* Add some margin to the top of the body to avoid overlapping with the header */
+  body {
+    margin-top: 30px;
+  }
+  
+  /* Style the links */
+  a {
+    color: #4909dd;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
