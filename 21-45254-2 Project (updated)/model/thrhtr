@@ -1,0 +1,91 @@
+// Function to validate the menu form data
+function validatemenuForm(mform) {
+    let isValid = true; // Initialize a variable to track form validity, assuming it's valid initially
+
+    // Clear previous error messages
+    clearErrorMessage('brandError'); // Clear error message for brand
+    clearErrorMessage('nameError'); // Clear error message for name
+    clearErrorMessage('descriptionError'); // Clear error message for description
+    clearErrorMessage('priceError'); // Clear error message for price
+
+    // Validate Brand
+    if (!mform.brand.value.trim()) { // Check if brand field is empty or contains only whitespace
+        displayError('brandError', "*Brand is required"); // Display error message for brand field
+        isValid = false; // Set isValid to false indicating form is invalid
+    }
+
+    // Validate Name
+    if (!mform.name.value.trim()) { // Check if name field is empty or contains only whitespace
+        displayError('nameError', "*Name is required"); // Display error message for name field
+        isValid = false; // Set isValid to false indicating form is invalid
+    }
+
+    // Validate Description
+    if (!mform.description.value.trim()) { // Check if description field is empty or contains only whitespace
+        displayError('descriptionError', "*Description is required"); // Display error message for description field
+        isValid = false; // Set isValid to false indicating form is invalid
+    }
+
+    // Validate Price
+    if (!mform.price.value || isNaN(mform.price.value) || parseFloat(mform.price.value) <= 0) {
+        // Check if price field is empty, not a number, or less than or equal to zero
+        displayError('priceError', "*Valid price is required"); // Display error message for price field
+        isValid = false; // Set isValid to false indicating form is invalid
+    }
+
+    return isValid; // Return whether the form data is valid or not
+}
+
+// Function to display error message
+function displayError(errorElementId, message) {
+    const errorElement = document.getElementById(errorElementId); // Get the error message element by its ID
+    if (errorElement) {
+        errorElement.innerHTML = message; // Set error message text
+        errorElement.style.color = "red"; // Set error message color to red
+    }
+}
+
+// Function to clear error message
+function clearErrorMessage(errorElementId) {
+    const errorElement = document.getElementById(errorElementId); // Get the error message element by its ID
+    if (errorElement) {
+        errorElement.innerHTML = ''; // Clear error message text
+    }
+}
+
+// Function to post menu data to the server
+function postMenuData() {
+    // Get form data
+    var brand = document.getElementById('brand').value; // Get value of brand input field
+    var name = document.getElementById('name').value; // Get value of name input field
+    var description = document.getElementById('description').value; // Get value of description input field
+    var price = document.getElementById('price').value; // Get value of price input field
+
+    // Create form data object
+    var formData = new FormData();
+    formData.append('brand', brand); // Append brand data to form data
+    formData.append('name', name); // Append name data to form data
+    formData.append('description', description); // Append description data to form data
+    formData.append('price', price); // Append price data to form data
+
+    // Create XMLHttpRequest object
+    var xhttp = new XMLHttpRequest();
+
+    // Define callback function to handle response
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Log response from server
+            console.log(this.responseText);
+        }
+    };
+
+    // Define error handling function
+    xhttp.onerror = function() {
+        // Log error message if request fails
+        console.error('Request failed');
+    };
+
+    // Open connection and send form data to server
+    xhttp.open('POST', 'process_add_menu.php', true);
+    xhttp.send(formData);
+}
